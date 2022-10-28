@@ -38,8 +38,8 @@ fun matchingValue(value: Int): String {
     }
 }
 
+@Suppress("kotlin:S1479")
 fun matchingValue2(value: Int): String {
-    @Suppress("S1479")
     return when(value) {
         0 -> "0"
         1 -> "0"

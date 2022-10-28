@@ -21,3 +21,7 @@ fun doubleSuppressed(values: List<Int>): List<Int> {
         doubleValue(value)
     }
 }
+
+fun foo(a: Int, @Suppress("UNUSED_PARAMETER") b: Int) = a
+fun bar(a: Int, @Suppress("kotlin:S1172") b: Int) = a
+fun baz(a: Int, b: Int) = a
