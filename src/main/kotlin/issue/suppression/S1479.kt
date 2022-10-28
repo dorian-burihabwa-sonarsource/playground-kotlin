@@ -1,7 +1,7 @@
 package issue.suppression
 
 fun matchingValue(value: Int): String {
-    Suppress("kotlin:S1479")
+    @Suppress("kotlin:S1479")
     return when(value) {
         0 -> "0"
         1 -> "0"
