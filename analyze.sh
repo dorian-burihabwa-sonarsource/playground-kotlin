@@ -6,6 +6,17 @@ if [[ "${1}" == "8.9" ]]; then
     -Dsonar.projectKey=playground-kotlin \
     -Dsonar.host.url=http://localhost:9000 \
     -Dsonar.login="${SONAR_TOKEN}"
-  else
-    echo "No version provided"
+elif [[ "${1}" == "9.7" ]]; then
+  source 9.7.secrets.env
+  ./gradlew sonarqube \
+    -Dsonar.projectKey=playground-kotlin \
+    -Dsonar.host.url=http://localhost:9000 \
+    -Dsonar.login="${SONAR_TOKEN}"
+elif [[ "${1}" == "9.8" ]]; then
+  source 9.7.secrets.env
+  ./gradlew sonarqube \
+      -Dsonar.projectKey=playground-kotlin \
+      -Dsonar.host.url=http://localhost:9000 \
+      -Dsonar.login="${SONAR_TOKEN}"
+  echo "No version provided"
 fi
